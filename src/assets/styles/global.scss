@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #222831;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  color: #fff;
+  width: 450px;
+  margin-right: 50px;
+  font-size: 28px;
+}
+
+.App {
+  background-color: #393e46;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  width: 750px;
+}
+
+.top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    img {
+      width: 50px;
+    }
+  }
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  gap: 10px;
+
+  li {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    color: #222831;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    span {
+      background-color: #00adb5;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+      text-transform: capitalize;
+    }
+  }
+
+  .disabled {
+    background-color: #222831;
+
+    span {
+      background-color: transparent;
+      color: transparent;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  .life-line {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+
+    li {
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  span {
+    background: #00adb5;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+
+    img {
+      width: 30px;
+    }
+  }
+}
