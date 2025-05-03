@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function OptionBox({ ans, char, disabled, level }) {
+function OptionBox({ ans, char, disabled, level, selectAns, selected }) {
   const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
@@ -9,8 +9,16 @@ function OptionBox({ ans, char, disabled, level }) {
 
   return (
     <li
-      className={`${disabled.includes(char) ? "disabled" : ""}`}
-      onClick={() => setClicked(!clicked)}
+      className={`${
+        disabled.includes(char) ? "disabled" : selected == ans ? "selected" : ""
+      }`}
+      onClick={() => {
+        if (clicked) {
+          selectAns(ans);
+        } else {
+          setClicked(true);
+        }
+      }}
     >
       <span>{char}</span>
       {clicked ? ans : ""}
